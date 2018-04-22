@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		471966F91D98EFA800615D4F /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 471966F81D98EFA800615D4F /* Converter.m */; };
+		475B724F1D63329C008F014C /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 475B724A1D63329C008F014C /* libcrypto.a */; };
+		475B72521D63329C008F014C /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 475B724D1D63329C008F014C /* libssl.a */; };
+		475B72541D6332DB008F014C /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 475B72531D6332DB008F014C /* libz.1.1.3.tbd */; };
+		475B72561D633652008F014C /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 475B72551D633652008F014C /* librtmp.a */; };
+		475B725E1D6466A3008F014C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475B725D1D6466A3008F014C /* AVFoundation.framework */; };
+		475B72601D6466AC008F014C /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475B725F1D6466AC008F014C /* VideoToolbox.framework */; };
+		475B72621D6466B3008F014C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475B72611D6466B3008F014C /* AudioToolbox.framework */; };
+		475B72651D64689C008F014C /* RecordVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 475B72641D64689C008F014C /* RecordVideo.m */; };
+		475B72681D646A76008F014C /* H264Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 475B72671D646A76008F014C /* H264Encoder.m */; };
+		4771DE8A1D7816EC00DCE467 /* RecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 4771DE891D7816EC00DCE467 /* RecordAudio.m */; };
+		4771DE8D1D7819D100DCE467 /* RecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4771DE8C1D7819D100DCE467 /* RecordManager.m */; };
+		4773F1B51D63115300FA9726 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4773F1B41D63115300FA9726 /* main.m */; };
+		4773F1B81D63115300FA9726 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4773F1B71D63115300FA9726 /* AppDelegate.m */; };
+		4773F1BB1D63115300FA9726 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4773F1BA1D63115300FA9726 /* ViewController.m */; };
+		4773F1BE1D63115300FA9726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4773F1BC1D63115300FA9726 /* Main.storyboard */; };
+		4773F1C01D63115300FA9726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4773F1BF1D63115300FA9726 /* Assets.xcassets */; };
+		4773F1C31D63115300FA9726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4773F1C11D63115300FA9726 /* LaunchScreen.storyboard */; };
+		4773F1CE1D63115300FA9726 /* RtmpPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4773F1CD1D63115300FA9726 /* RtmpPlayerTests.m */; };
+		4773F1D91D63115400FA9726 /* RtmpPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4773F1D81D63115400FA9726 /* RtmpPlayerUITests.m */; };
+		479410051D9660380090521F /* AudioUnitRecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 479410041D9660380090521F /* AudioUnitRecordAudio.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4773F1CA1D63115300FA9726 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4773F1A81D63115300FA9726 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4773F1AF1D63115300FA9726;
+			remoteInfo = RtmpPlayer;
+		};
+		4773F1D51D63115400FA9726 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4773F1A81D63115300FA9726 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4773F1AF1D63115300FA9726;
+			remoteInfo = RtmpPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		471966F71D98EFA800615D4F /* Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
+		471966F81D98EFA800615D4F /* Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
+		475B724A1D63329C008F014C /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = lib/libcrypto.a; sourceTree = "<group>"; };
+		475B724D1D63329C008F014C /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = lib/libssl.a; sourceTree = "<group>"; };
+		475B72531D6332DB008F014C /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		475B72551D633652008F014C /* librtmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librtmp.a; sourceTree = "<group>"; };
+		475B725D1D6466A3008F014C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		475B725F1D6466AC008F014C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		475B72611D6466B3008F014C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		475B72631D64689C008F014C /* RecordVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordVideo.h; sourceTree = "<group>"; };
+		475B72641D64689C008F014C /* RecordVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordVideo.m; sourceTree = "<group>"; };
+		475B72661D646A76008F014C /* H264Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H264Encoder.h; sourceTree = "<group>"; };
+		475B72671D646A76008F014C /* H264Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H264Encoder.m; sourceTree = "<group>"; };
+		4771DE881D7816EC00DCE467 /* RecordAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAudio.h; sourceTree = "<group>"; };
+		4771DE891D7816EC00DCE467 /* RecordAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudio.m; sourceTree = "<group>"; };
+		4771DE8B1D7819D100DCE467 /* RecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordManager.h; sourceTree = "<group>"; };
+		4771DE8C1D7819D100DCE467 /* RecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordManager.m; sourceTree = "<group>"; };
+		4773F1B01D63115300FA9726 /* RtmpPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RtmpPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4773F1B41D63115300FA9726 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4773F1B61D63115300FA9726 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4773F1B71D63115300FA9726 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4773F1B91D63115300FA9726 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4773F1BA1D63115300FA9726 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4773F1BD1D63115300FA9726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4773F1BF1D63115300FA9726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4773F1C21D63115300FA9726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4773F1C41D63115300FA9726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4773F1C91D63115300FA9726 /* RtmpPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RtmpPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4773F1CD1D63115300FA9726 /* RtmpPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RtmpPlayerTests.m; sourceTree = "<group>"; };
+		4773F1CF1D63115300FA9726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4773F1D41D63115400FA9726 /* RtmpPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RtmpPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4773F1D81D63115400FA9726 /* RtmpPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RtmpPlayerUITests.m; sourceTree = "<group>"; };
+		4773F1DA1D63115400FA9726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479410031D9660380090521F /* AudioUnitRecordAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUnitRecordAudio.h; sourceTree = "<group>"; };
+		479410041D9660380090521F /* AudioUnitRecordAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUnitRecordAudio.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4773F1AD1D63115300FA9726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475B72621D6466B3008F014C /* AudioToolbox.framework in Frameworks */,
+				475B72601D6466AC008F014C /* VideoToolbox.framework in Frameworks */,
+				475B725E1D6466A3008F014C /* AVFoundation.framework in Frameworks */,
+				475B72541D6332DB008F014C /* libz.1.1.3.tbd in Frameworks */,
+				475B72521D63329C008F014C /* libssl.a in Frameworks */,
+				475B72561D633652008F014C /* librtmp.a in Frameworks */,
+				475B724F1D63329C008F014C /* libcrypto.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4773F1C61D63115300FA9726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4773F1D11D63115400FA9726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47222DE71DE6DFA30031DBDD /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				475B72631D64689C008F014C /* RecordVideo.h */,
+				475B72641D64689C008F014C /* RecordVideo.m */,
+				475B72661D646A76008F014C /* H264Encoder.h */,
+				475B72671D646A76008F014C /* H264Encoder.m */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		47222DE81DE6DFAF0031DBDD /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4771DE881D7816EC00DCE467 /* RecordAudio.h */,
+				4771DE891D7816EC00DCE467 /* RecordAudio.m */,
+				479410031D9660380090521F /* AudioUnitRecordAudio.h */,
+				479410041D9660380090521F /* AudioUnitRecordAudio.m */,
+				471966F71D98EFA800615D4F /* Converter.h */,
+				471966F81D98EFA800615D4F /* Converter.m */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		47222DE91DE6F6510031DBDD /* RecordManager */ = {
+			isa = PBXGroup;
+			children = (
+				4771DE8B1D7819D100DCE467 /* RecordManager.h */,
+				4771DE8C1D7819D100DCE467 /* RecordManager.m */,
+			);
+			name = RecordManager;
+			sourceTree = "<group>";
+		};
+		475B72481D633285008F014C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				475B72611D6466B3008F014C /* AudioToolbox.framework */,
+				475B725F1D6466AC008F014C /* VideoToolbox.framework */,
+				475B725D1D6466A3008F014C /* AVFoundation.framework */,
+				475B72531D6332DB008F014C /* libz.1.1.3.tbd */,
+				475B724A1D63329C008F014C /* libcrypto.a */,
+				475B72551D633652008F014C /* librtmp.a */,
+				475B724D1D63329C008F014C /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4773F1A71D63115300FA9726 = {
+			isa = PBXGroup;
+			children = (
+				4773F1B21D63115300FA9726 /* RtmpPlayer */,
+				4773F1CC1D63115300FA9726 /* RtmpPlayerTests */,
+				4773F1D71D63115400FA9726 /* RtmpPlayerUITests */,
+				4773F1B11D63115300FA9726 /* Products */,
+				475B72481D633285008F014C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4773F1B11D63115300FA9726 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4773F1B01D63115300FA9726 /* RtmpPlayer.app */,
+				4773F1C91D63115300FA9726 /* RtmpPlayerTests.xctest */,
+				4773F1D41D63115400FA9726 /* RtmpPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4773F1B21D63115300FA9726 /* RtmpPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				47222DE91DE6F6510031DBDD /* RecordManager */,
+				47222DE81DE6DFAF0031DBDD /* Audio */,
+				47222DE71DE6DFA30031DBDD /* Video */,
+				4773F1B61D63115300FA9726 /* AppDelegate.h */,
+				4773F1B71D63115300FA9726 /* AppDelegate.m */,
+				4773F1B91D63115300FA9726 /* ViewController.h */,
+				4773F1BA1D63115300FA9726 /* ViewController.m */,
+				4773F1BC1D63115300FA9726 /* Main.storyboard */,
+				4773F1BF1D63115300FA9726 /* Assets.xcassets */,
+				4773F1C11D63115300FA9726 /* LaunchScreen.storyboard */,
+				4773F1C41D63115300FA9726 /* Info.plist */,
+				4773F1B31D63115300FA9726 /* Supporting Files */,
+			);
+			path = RtmpPlayer;
+			sourceTree = "<group>";
+		};
+		4773F1B31D63115300FA9726 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4773F1B41D63115300FA9726 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4773F1CC1D63115300FA9726 /* RtmpPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4773F1CD1D63115300FA9726 /* RtmpPlayerTests.m */,
+				4773F1CF1D63115300FA9726 /* Info.plist */,
+			);
+			path = RtmpPlayerTests;
+			sourceTree = "<group>";
+		};
+		4773F1D71D63115400FA9726 /* RtmpPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4773F1D81D63115400FA9726 /* RtmpPlayerUITests.m */,
+				4773F1DA1D63115400FA9726 /* Info.plist */,
+			);
+			path = RtmpPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4773F1AF1D63115300FA9726 /* RtmpPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4773F1DD1D63115400FA9726 /* Build configuration list for PBXNativeTarget "RtmpPlayer" */;
+			buildPhases = (
+				4773F1AC1D63115300FA9726 /* Sources */,
+				4773F1AD1D63115300FA9726 /* Frameworks */,
+				4773F1AE1D63115300FA9726 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RtmpPlayer;
+			productName = RtmpPlayer;
+			productReference = 4773F1B01D63115300FA9726 /* RtmpPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4773F1C81D63115300FA9726 /* RtmpPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4773F1E01D63115400FA9726 /* Build configuration list for PBXNativeTarget "RtmpPlayerTests" */;
+			buildPhases = (
+				4773F1C51D63115300FA9726 /* Sources */,
+				4773F1C61D63115300FA9726 /* Frameworks */,
+				4773F1C71D63115300FA9726 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4773F1CB1D63115300FA9726 /* PBXTargetDependency */,
+			);
+			name = RtmpPlayerTests;
+			productName = RtmpPlayerTests;
+			productReference = 4773F1C91D63115300FA9726 /* RtmpPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4773F1D31D63115400FA9726 /* RtmpPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4773F1E31D63115400FA9726 /* Build configuration list for PBXNativeTarget "RtmpPlayerUITests" */;
+			buildPhases = (
+				4773F1D01D63115400FA9726 /* Sources */,
+				4773F1D11D63115400FA9726 /* Frameworks */,
+				4773F1D21D63115400FA9726 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4773F1D61D63115400FA9726 /* PBXTargetDependency */,
+			);
+			name = RtmpPlayerUITests;
+			productName = RtmpPlayerUITests;
+			productReference = 4773F1D41D63115400FA9726 /* RtmpPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4773F1A81D63115300FA9726 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = clj;
+				TargetAttributes = {
+					4773F1AF1D63115300FA9726 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P7P3YKVD7Y;
+					};
+					4773F1C81D63115300FA9726 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P7P3YKVD7Y;
+						TestTargetID = 4773F1AF1D63115300FA9726;
+					};
+					4773F1D31D63115400FA9726 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P7P3YKVD7Y;
+						TestTargetID = 4773F1AF1D63115300FA9726;
+					};
+				};
+			};
+			buildConfigurationList = 4773F1AB1D63115300FA9726 /* Build configuration list for PBXProject "RtmpPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4773F1A71D63115300FA9726;
+			productRefGroup = 4773F1B11D63115300FA9726 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4773F1AF1D63115300FA9726 /* RtmpPlayer */,
+				4773F1C81D63115300FA9726 /* RtmpPlayerTests */,
+				4773F1D31D63115400FA9726 /* RtmpPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4773F1AE1D63115300FA9726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4773F1C31D63115300FA9726 /* LaunchScreen.storyboard in Resources */,
+				4773F1C01D63115300FA9726 /* Assets.xcassets in Resources */,
+				4773F1BE1D63115300FA9726 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4773F1C71D63115300FA9726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4773F1D21D63115400FA9726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4773F1AC1D63115300FA9726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				471966F91D98EFA800615D4F /* Converter.m in Sources */,
+				475B72681D646A76008F014C /* H264Encoder.m in Sources */,
+				4771DE8A1D7816EC00DCE467 /* RecordAudio.m in Sources */,
+				4773F1BB1D63115300FA9726 /* ViewController.m in Sources */,
+				479410051D9660380090521F /* AudioUnitRecordAudio.m in Sources */,
+				475B72651D64689C008F014C /* RecordVideo.m in Sources */,
+				4771DE8D1D7819D100DCE467 /* RecordManager.m in Sources */,
+				4773F1B81D63115300FA9726 /* AppDelegate.m in Sources */,
+				4773F1B51D63115300FA9726 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4773F1C51D63115300FA9726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4773F1CE1D63115300FA9726 /* RtmpPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4773F1D01D63115400FA9726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4773F1D91D63115400FA9726 /* RtmpPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4773F1CB1D63115300FA9726 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4773F1AF1D63115300FA9726 /* RtmpPlayer */;
+			targetProxy = 4773F1CA1D63115300FA9726 /* PBXContainerItemProxy */;
+		};
+		4773F1D61D63115400FA9726 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4773F1AF1D63115300FA9726 /* RtmpPlayer */;
+			targetProxy = 4773F1D51D63115400FA9726 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4773F1BC1D63115300FA9726 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4773F1BD1D63115300FA9726 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4773F1C11D63115300FA9726 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4773F1C21D63115300FA9726 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4773F1DB1D63115400FA9726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4773F1DC1D63115400FA9726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4773F1DE1D63115400FA9726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P7P3YKVD7Y;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/include\"",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = RtmpPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolianxi.kkchats;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		4773F1DF1D63115400FA9726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P7P3YKVD7Y;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/include\"",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = RtmpPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolianxi.kkchats;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+		4773F1E11D63115400FA9726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RtmpPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.RtmpPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RtmpPlayer.app/RtmpPlayer";
+			};
+			name = Debug;
+		};
+		4773F1E21D63115400FA9726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RtmpPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.RtmpPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RtmpPlayer.app/RtmpPlayer";
+			};
+			name = Release;
+		};
+		4773F1E41D63115400FA9726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RtmpPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.RtmpPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RtmpPlayer;
+			};
+			name = Debug;
+		};
+		4773F1E51D63115400FA9726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RtmpPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.RtmpPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RtmpPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4773F1AB1D63115300FA9726 /* Build configuration list for PBXProject "RtmpPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4773F1DB1D63115400FA9726 /* Debug */,
+				4773F1DC1D63115400FA9726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4773F1DD1D63115400FA9726 /* Build configuration list for PBXNativeTarget "RtmpPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4773F1DE1D63115400FA9726 /* Debug */,
+				4773F1DF1D63115400FA9726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4773F1E01D63115400FA9726 /* Build configuration list for PBXNativeTarget "RtmpPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4773F1E11D63115400FA9726 /* Debug */,
+				4773F1E21D63115400FA9726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4773F1E31D63115400FA9726 /* Build configuration list for PBXNativeTarget "RtmpPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4773F1E41D63115400FA9726 /* Debug */,
+				4773F1E51D63115400FA9726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4773F1A81D63115300FA9726 /* Project object */;
+}
